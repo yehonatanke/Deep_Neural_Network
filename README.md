@@ -137,6 +137,17 @@ Please replace `'path/to/train_catvnoncat.h5'` and `'path/to/test_catvnoncat.h5'
 
 This project serves as a foundation for building and understanding deep neural networks for image classification tasks.
 
+## Dependencies
+
+- numpy
+- matplotlib
+- scipy
+- h5py
+- PIL (Pillow)
+- time
+- copy
+- util.py
+
 ## Acknowledgments
 
 This project is based on the materials provided in the 'Deep Learning Specialization' course on Coursera. The foundational concepts, logic, and inspiration for this project are derived from the course materials created by the DeepLearning.AI team.
