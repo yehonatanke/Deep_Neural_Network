@@ -21,8 +21,8 @@ from util import *
 # - Each image is of shape (num_px, num_px, 3) where 3 is for the 3 channels (RGB).
 
 # Load dataset
-train_data_path = 'path/to/train_catvnoncat.h5'
-test_data_path = 'path/to/test_catvnoncat.h5'
+train_data_path = '/Users/yehonatankeypur/Programing Projects/Python/Pycharm Projects/DeepLearningSpecialization Assignments/dataset_for_DNN/train_catvnoncat.h5'
+test_data_path = '/Users/yehonatankeypur/Programing Projects/Python/Pycharm Projects/DeepLearningSpecialization Assignments/dataset_for_DNN/test_catvnoncat.h5'
 train_x_orig, train_y, test_x_orig, test_y, classes = load_data(train_data_path, test_data_path)
 
 # Explore your dataset
@@ -30,6 +30,7 @@ m_train = train_x_orig.shape[0]
 num_px = train_x_orig.shape[1]
 m_test = test_x_orig.shape[0]
 print("--------------------")
+print("Dataset exploration:")
 print("Number of training examples: " + str(m_train))
 print("Number of testing examples: " + str(m_test))
 print("Each image is of size: (" + str(num_px) + ", " + str(num_px) + ", 3)")
@@ -47,6 +48,7 @@ test_x_flatten = test_x_orig.reshape(test_x_orig.shape[0], -1).T
 train_x = train_x_flatten / 255.
 test_x = test_x_flatten / 255.
 
+print("Reshape and standardize the data:")
 print("train_x's shape: " + str(train_x.shape))
 print("test_x's shape: " + str(test_x.shape))
 print("--------------------")
@@ -88,10 +90,10 @@ layers_dims = (n_x, n_h, n_y)
 learning_rate = 0.0075
 num_iterations = 500
 # Apply a two-layer neural network
-print("A two-layer neural network:")
+print("two-layer neural network:")
 parameters, costs = two_layer_model(train_x, train_y, layers_dims, learning_rate, num_iterations, print_cost=True)
 # Use the trained parameters to classify images from the dataset
-print("2-layer predictions:")
+print("\n2-layer predictions:")
 print("Train Accuracy:")
 predictions_train = predict(train_x, train_y, parameters)
 print("Test Accuracy:")
@@ -107,10 +109,10 @@ predictions_test = predict(test_x, test_y, parameters)
 # L layer model
 # Constants to defining the model
 layers_dims_l = [12288, 20, 7, 5, 1]  # 4-layer model
-print("---\nAn L-layer neural network:")
+print("---\nL-layer neural network:")
 parameters_l, costs2 = L_layer_model(train_x, train_y, layers_dims_l, num_iterations=num_iterations, print_cost=True)
 # Use the trained parameters to classify images from the dataset
-print("L-layer predictions:")
+print("\nL-layer predictions:")
 print("Train Accuracy:")
 pred_train = predict(train_x, train_y, parameters_l)
 print("Test Accuracy:")
