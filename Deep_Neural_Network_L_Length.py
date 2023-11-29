@@ -112,9 +112,9 @@ parameters_l, costs2 = L_layer_model(train_x, train_y, layers_dims_l, num_iterat
 # Use the trained parameters to classify images from the dataset
 print("L-layer predictions:")
 print("Train Accuracy:")
-pred_train = predict(train_x, train_y, parameters2)
+pred_train = predict(train_x, train_y, parameters_l)
 print("Test Accuracy:")
-pred_test = predict(test_x, test_y, parameters2)
+pred_test = predict(test_x, test_y, parameters_l)
 
 # Results Analysis:
 # Show images the L-layer model labeled incorrectly
