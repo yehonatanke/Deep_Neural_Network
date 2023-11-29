@@ -89,11 +89,16 @@ predictions_test = predict(test_x, test_y, parameters)
 ### CONSTANTS DEFINING THE MODEL ####
 ```python
 n_x = 12288  # num_px * num_px * 3
-layers_dims = [n_x, 20, 7, 5, 1] #  4-layer model
+layers_dims = [n_x, n_01, n_02, n_03, n_04] #  4-layer model
 ```
 
   - The dimension of the x-axis of the input matrix: `n_x = num_px * num_px * 3`
   - The input size of each layer size: `layers_dims_l = [12288, 20, 7, 5, 1] #  4-layer model`
+    -   The first element, 12288, indicates the input layer with 12288 nodes.
+    -   The second element, 20, indicates the first hidden layer with 20 nodes.
+    -   The third element, 7, indicates the second hidden layer with 7 nodes.
+    -   The fourth element, 5, indicates the third hidden layer with 5 nodes.
+    -   The fifth element, 1, indicates the output layer with 1 node.
   - The number of iterations: `num_iterations = num_iterations`
 
 ***Train the Model***
@@ -119,3 +124,40 @@ print_mislabeled_images(classes, test_x, test_y, pred_test)
  - Camera Angle
  - Brightness of the picture
  - Scale variation (the cat is very large or small in image)
+
+## Results
+
+The models' performance is evaluated on both the training and test datasets. Results analysis provides insights into the model's strengths and weaknesses.
+
+## Configuration
+
+Please replace `'path/to/train_catvnoncat.h5'` and `'path/to/test_catvnoncat.h5'` with the actual paths to your dataset files.
+
+## Conclusion
+
+This project serves as a foundation for building and understanding deep neural networks for image classification tasks.
+
+## Acknowledgments
+
+This project is based on the materials provided in the 'Deep Learning Specialization' course on Coursera. The foundational concepts, logic, and inspiration for this project are derived from the course materials created by the DeepLearning.AI team.
+
+#### Attribution
+
+Course: [Neural Networks and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning) 
+
+Instructor: Andrew Ng 
+
+Platform: [Coursera](https://www.coursera.org)
+
+Host: [DeepLearning.AI](https://www.deeplearning.ai)
+
+Please note that while the code structure has been extensively modified, the core ideas and problem-solving approach are based on the educational content provided in the course.
+
+## License
+
+This program is released under the [MIT License](https://github.com/yehonatanke/Neural_Network_Logistic_Regression/blob/main/LICENSE).
+
+## Author
+
+yehonataKe
+
