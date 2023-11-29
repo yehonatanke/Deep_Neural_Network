@@ -89,7 +89,7 @@ predictions_test = predict(test_x, test_y, parameters)
 ### CONSTANTS DEFINING THE MODEL ####
 ```python
 n_x = 12288  # num_px * num_px * 3
-layers_dims = [n_x, n_01, n_02, n_03, n_04] #  4-layer model
+layers_dims = [n_x, n_01, n_02, n_03, n_04]  # 4-layer model
 ```
 
   - The dimension of the x-axis of the input matrix: `n_x = num_px * num_px * 3`
