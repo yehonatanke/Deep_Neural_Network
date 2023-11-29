@@ -42,6 +42,8 @@ The dataset consists of:
 
 3. **Reshape and Standardize Data**
 
+
+
 ### Two-layer Neural Network:
 
 **The model can be summarized as: INPUT -> LINEAR -> RELU -> LINEAR -> SIGMOID -> OUTPUT.**
@@ -78,6 +80,17 @@ predictions_test = predict(test_x, test_y, parameters)
 ```
 
 ### L-layer Neural Network
+
+The initialization for a deeper L-layer neural network is more intricate due to the increased number of weight matrices and bias vectors. When completing the `initialize_parameters_deep` function, it is crucial to ensure that dimensions match between each layer. Recall that 𝑛[𝑙] is the number of units in layer 𝑙. For example, if the size of your input 𝑋 is (12288,209) (with 𝑚=209 examples) then:
+
+ |            |   Shape of W         |     Shape of b  |   Activation                    |   Shape of Activation   |
+ |------------|----------------------|-----------------|---------------------------------|-------------------------|
+ | Layer 1    |    (𝑛[1],12288)      | (𝑛[1],1)        | 𝑍[1]=𝑊[1]𝑋+𝑏[1]                 | (𝑛[1],209)              |
+ | Layer 2    |    (𝑛[2],𝑛[1])       | (𝑛[2],1)        | 𝑍[2]=𝑊[2]𝐴[1]+𝑏[2]              | (𝑛[2],209)              |
+ | ⋮          | ⋮                    | ⋮               | ⋮                                | ⋮                      |
+ | Layer L-1  |    (𝑛[𝐿−1],𝑛[𝐿−2])   | (𝑛[𝐿−1],1)      | 𝑍[𝐿−1]=𝑊[𝐿−1]𝐴[𝐿−2]+𝑏[𝐿−1]       | (𝑛[𝐿−1],209)           |
+ | Layer L    |    (𝑛[𝐿],𝑛[𝐿−1])     | (𝑛[𝐿],1)        | 𝑍[𝐿]=𝑊[𝐿]𝐴[𝐿−1]+𝑏[𝐿]             | (𝑛[𝐿],209)             |
+
 
 **The model can be summarized as: [LINEAR -> RELU] × (L-1) -> LINEAR -> SIGMOID.**
   - **Detailed Architecture:**
