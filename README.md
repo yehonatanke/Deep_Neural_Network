@@ -155,7 +155,7 @@ Please note that while the code structure has been extensively modified, the cor
 
 ## License
 
-This program is released under the [MIT License](https://github.com/yehonatanke/Neural_Network_Logistic_Regression/blob/main/LICENSE).
+This program is released under the [MIT License](https://github.com/yehonatanke/Deep_Neural_Network/blob/main/LICENSE).
 
 ## Author
 
