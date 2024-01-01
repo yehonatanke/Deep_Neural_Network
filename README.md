@@ -1,3 +1,9 @@
+<div align="center">
+  <img src="https://img.shields.io/badge/language-Python-%233776AB.svg?logo=python">
+  <img src="https://img.shields.io/badge/uses-Deep%20Neural%20Network-%232A2F3D.svg">
+  <img src="https://custom-icon-badges.demolab.com/github/license/denvercoder1/custom-icon-badges?logo=law">
+</div>
+
 # Deep Neural Network
 A 2-layer neural network and an L-layer deep neural network to distinguish cat images from non-cat images.
 
