@@ -21,8 +21,8 @@ from util import *
 # - Each image is of shape (num_px, num_px, 3) where 3 is for the 3 channels (RGB).
 
 # Load dataset
-train_data_path = '/Users/yehonatankeypur/Programing Projects/Python/Pycharm Projects/DeepLearningSpecialization Assignments/dataset_for_DNN/train_catvnoncat.h5'
-test_data_path = '/Users/yehonatankeypur/Programing Projects/Python/Pycharm Projects/DeepLearningSpecialization Assignments/dataset_for_DNN/test_catvnoncat.h5'
+train_data_path = '/Users/path_to_dataset/dataset_for_DNN/train_catvnoncat.h5'
+test_data_path = '/Users/path_to_dataset/test_catvnoncat.h5'
 train_x_orig, train_y, test_x_orig, test_y, classes = load_data(train_data_path, test_data_path)
 
 # Explore your dataset
